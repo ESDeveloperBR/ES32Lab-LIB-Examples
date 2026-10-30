@@ -1,0 +1,26 @@
+{
+    "name":  "Visualizador de Fotos ES32Lab",
+    "developer":  "ES Developer",
+    "version":  "1.0.0",
+    "version_date":  "2026-10-29",
+    "description":  "Exemplo oficial da LIB ES32Lab que exibe fotos JPEG do cartao microSD no display TFT e permite navegar entre imagens pelo teclado analogico. Codigo-fonte disponivel para download no botao Repositorio.",
+    "manifest_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/photo_viewer-manifest.json",
+    "uses_wifi":  false,
+    "keywords":  [
+                     "ES32Lab",
+                     "Visualizador de Fotos",
+                     "JPEG",
+                     "microSD",
+                     "TFT",
+                     "Teclado Analogico",
+                     "Exemplo"
+                 ],
+    "thumbnail_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/photo_viewer-thumb.jpg",
+    "video_url":  "https://www.youtube.com/shorts/wRR5wuhlXIY",
+    "website":  "https://www.esdeveloper.com.br/",
+    "repository":  "https://github.com/ESDeveloperBR/ES32Lab/blob/main/examples/Display-TFT/PhotoViewerAnalogKeyboard/PhotoViewerAnalogKeyboard.ino",
+    "firmware_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/photo_viewer.bin",
+    "firmware_sha256":  "90a12dc24c72cd110338a17f64586d90d7874dfef9c8cbc787deefb8c894f1ff",
+    "full_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/photo_viewer-full.bin",
+    "full_sha256":  "8ec2aa316c880a7ea8adeddbe6b60771e5f2b055f5386ef8396a78b042dba9eb"
+}
