@@ -1,0 +1,24 @@
+{
+    "name":  "Tetris ES32Lab",
+    "developer":  "ES Developer",
+    "version":  "1.0.0",
+    "version_date":  "2026-10-27",
+    "description":  "Exemplo oficial da LIB ES32Lab com jogo Tetris no display TFT, controlado pelo teclado analogico da placa. Codigo-fonte disponivel para download no botão Repositório.",
+    "manifest_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/tetris-manifest.json",
+    "uses_wifi":  false,
+    "keywords":  [
+                     "ES32Lab",
+                     "Tetris",
+                     "Jogo",
+                     "TFT",
+                     "Teclado Analogico",
+                     "Exemplo"
+                 ],
+    "thumbnail_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/tetris-thumb.jpg",
+    "website":  "https://www.esdeveloper.com.br/",
+    "repository":  "https://github.com/ESDeveloperBR/ES32Lab/blob/main/examples/Games/Tetris/Tetris.ino",
+    "firmware_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/tetris.bin",
+    "firmware_sha256":  "ad70ec8e6acd6cc5773c6f14c1887195270579bfea57e931621e5249c495bf04",
+    "full_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/tetris-full.bin",
+    "full_sha256":  "8c4ba985c65b68257ea6ef47a3fa4aa803c30cfd076643e5c83c208ace939c8f"
+}

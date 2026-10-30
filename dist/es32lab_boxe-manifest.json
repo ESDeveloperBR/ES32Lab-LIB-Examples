@@ -1,0 +1,26 @@
+{
+    "name":  "ES32Lab Boxe",
+    "developer":  "ES Developer",
+    "version":  "0.10.0",
+    "version_date":  "2026-10-28",
+    "description":  "Exemplo oficial da LIB ES32Lab com jogo de boxe no display TFT, teclado analogico, efeitos sonoros e adversarios com inteligencia artificial. Codigo-fonte disponivel para download no botão Repositório.",
+    "manifest_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/es32lab_boxe-manifest.json",
+    "uses_wifi":  false,
+    "keywords":  [
+                     "ES32Lab",
+                     "Boxe",
+                     "Jogo",
+                     "TFT",
+                     "Teclado Analogico",
+                     "Buzzer",
+                     "Inteligencia Artificial",
+                     "Exemplo"
+                 ],
+    "thumbnail_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/es32lab_boxe-thumb.jpg",
+    "website":  "https://www.esdeveloper.com.br/",
+    "repository":  "https://github.com/ESDeveloperBR/ES32Lab/blob/main/examples/Games/ES32LabBoxe/ES32LabBoxe.ino",
+    "firmware_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/es32lab_boxe.bin",
+    "firmware_sha256":  "5000fa41446da688e9d8ab3af9293b1f3a812c4ecfe503bab34b128a04f850a8",
+    "full_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/es32lab_boxe-full.bin",
+    "full_sha256":  "459610938c9211873c619faf28e7ef89faf66f7e90f066dfae1aa843c770a367"
+}
