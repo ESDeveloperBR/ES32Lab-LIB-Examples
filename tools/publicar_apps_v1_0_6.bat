@@ -271,8 +271,8 @@ function Publish([string]$root,[string]$repo,[string]$branch,[string]$version) {
     return $false
   } finally { Pop-Location }
 }
-function FinalSummary([string]$dist,[string]$repo,[string]$branch,[string]$mode,[bool]$pushed) {
-  Title "RESULTADO FINAL - PUBLICAR APPS v1.0.5"
+function FinalSummary([string]$dist,[string]$repo,[string]$branch,[string]$mode,[bool]$pushed,[string[]]$targetManifests) {
+  Title "RESULTADO FINAL - PUBLICAR APPS v1.0.6"
   if($mode -eq "preparar") {
     Write-Host "[OK] Preparacao concluida com sucesso."
     Write-Host "[INFO] Publicacao nao solicitada. Os arquivos estao apenas em dist/."
@@ -286,7 +286,10 @@ function FinalSummary([string]$dist,[string]$repo,[string]$branch,[string]$mode,
   Write-Host ""
   Write-Host "MANIFESTO(S) PARA CADASTRO:"
   $files=@(Get-ChildItem -LiteralPath $dist -File -Filter "*.json" -ErrorAction SilentlyContinue |
-    Where-Object { $_.Name -eq "manifest.json" -or $_.Name -like "*-manifest.json" } | Sort-Object Name)
+    Where-Object {
+      ($_.Name -eq "manifest.json" -or $_.Name -like "*-manifest.json") -and
+      ($targetManifests.Count -eq 0 -or $_.Name -in $targetManifests)
+    } | Sort-Object Name)
   if(-not $files.Count) {
     Write-Host "[AVISO] Nenhum manifesto encontrado em dist/."
     return
@@ -402,7 +405,7 @@ try {
     else { $selected=@($envs); if($selected.Count -gt 1) { throw "Modo simples tem varios ambientes. Defina default_envs." } }
     if($selected.Count -ne 1) { throw "Modo simples requer exatamente um ambiente." }
   }
-  Title "ES Developer - Publicar Apps v1.0.5"
+  Title "ES Developer - Publicar Apps v1.0.6"
   Write-Host "Modo: $(if($script:isComposite){'Composto'}else{'Simples'})"
   Write-Host "Repositorio: $pubRepo"
   Write-Host "Branch: $branch"
@@ -418,6 +421,18 @@ try {
   if($choice -in @("0","C","CANCELAR")) { StopUser }
   if($choice -notin @("1","2","3")) { throw "Opcao invalida." }
   $dist=Join-Path $root "dist"
+  # Exibir somente os manifestos dos ambientes selecionados; no modo
+  # composto sem default_envs, exibir os manifestos de todos os apps alvo.
+  $targetManifests=@()
+  if($script:isComposite) {
+    foreach($e in $selected) {
+      $bn=Val $ini["release_$e"] "bin_name"
+      if(-not $bn) { $bn=$e }
+      $targetManifests+=("$bn-manifest.json")
+    }
+  } else {
+    $targetManifests=@("manifest.json")
+  }
   if($choice -ne "3") {
     $pio=PlatformIO
     $stageRoot=Join-Path $root ".pio\publicar_apps_stage"
@@ -452,13 +467,13 @@ try {
     }
   }
   if($choice -eq "2") {
-    FinalSummary $dist $pubRepo $branch "preparar" $false
+    FinalSummary $dist $pubRepo $branch "preparar" $false $targetManifests
     exit 0
   }
   if(-not(Test-Path -LiteralPath $dist)) { throw "Pasta dist/ nao existe." }
   Write-Host "Arquivos existentes em dist/: $(@(Get-ChildItem -LiteralPath $dist -File).Count)"
   $wasPushed=Publish $root $pubRepo $branch $globalVersion
-  FinalSummary $dist $pubRepo $branch "publicar" ([bool]$wasPushed)
+  FinalSummary $dist $pubRepo $branch "publicar" ([bool]$wasPushed) $targetManifests
   exit 0
 } catch [OperationCanceledException] {
   Write-Host "[CANCELADO] Operacao encerrada. Alteracoes ja realizadas nao foram revertidas."
