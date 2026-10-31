@@ -4,7 +4,7 @@
     "version":  "1.0.0",
     "version_date":  "2026-10-29",
     "description":  "Exemplo didatico com a LIB oficial ES32Lab: jogo de aventura em tres fases no display TFT, no qual um sapo captura moscas e evita jacares, com teclado analogico e efeitos sonoros. Codigo-fonte disponivel para download no botao Repositorio.",
-    "manifest_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/frog_adventure-manifest.json",
+    "manifest_url":  "https://raw.githubusercontent.com/ESDeveloperBR/ES32Lab-LIB-Examples/main/dist/frog_adventure-manifest.json",
     "uses_wifi":  false,
     "keywords":  [
                      "ES32Lab",
@@ -16,12 +16,12 @@
                      "Buzzer",
                      "Exemplo"
                  ],
-    "thumbnail_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/frog_adventure-thumb.jpg",
+    "thumbnail_url":  "https://raw.githubusercontent.com/ESDeveloperBR/ES32Lab-LIB-Examples/main/dist/frog_adventure-thumb.jpg",
     "video_url":  "https://www.youtube.com/@esdeveloperbr",
     "website":  "https://www.esdeveloper.com.br/",
-    "repository":  "https://github.com/ESDeveloperBR/ES32Lab",
-    "firmware_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/frog_adventure.bin",
+    "repository":  "https://github.com/ESDeveloperBR/ES32Lab/blob/main/examples/Games/ForgAdventure/FrogAdventure.ino",
+    "firmware_url":  "https://raw.githubusercontent.com/ESDeveloperBR/ES32Lab-LIB-Examples/main/dist/frog_adventure.bin",
     "firmware_sha256":  "aa9066ede9b32932d956c58cd0fd8ea9088fab097639f85203573fc28fa41928",
-    "full_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/frog_adventure-full.bin",
+    "full_url":  "https://raw.githubusercontent.com/ESDeveloperBR/ES32Lab-LIB-Examples/main/dist/frog_adventure-full.bin",
     "full_sha256":  "6db17e77dd7a93dea81906ee179afdc03712d8faba3e4cc4a0ee02bd7c948c2f"
 }
