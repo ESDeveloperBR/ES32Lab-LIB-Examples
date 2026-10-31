@@ -4,7 +4,7 @@
     "version":  "1.0.0",
     "version_date":  "2026-10-27",
     "description":  "Exemplo oficial da LIB ES32Lab que exibe imagens da camera OV2640 no display TFT. Codigo-fonte disponivel para download no botão Repositório.",
-    "manifest_url":  "https://raw.githubusercontent.com/ESDeveloperBR/ES32Lab-LIB-Examples/refs/heads/main/dist/camera_display_tft-manifest.json",
+    "manifest_url":  "https://raw.githubusercontent.com/ESDeveloperBR/ES32Lab-LIB-Examples/main/dist/camera_display_tft-manifest.json",
     "uses_wifi":  false,
     "keywords":  [
                      "ES32Lab",
@@ -14,7 +14,7 @@
                      "TFT",
                      "Exemplo"
                  ],
-    "thumbnail_url":  "https://github.com/ESDeveloperBR/ES32Lab-LIB-Examples/releases/latest/download/camera_display_tft-thumb.jpg",
+    "thumbnail_url":  "https://raw.githubusercontent.com/ESDeveloperBR/ES32Lab-LIB-Examples/main/dist/camera_display_tft-thumb.jpg",
     "video_url":  "https://www.youtube.com/@esdeveloperbr",
     "website":  "https://www.esdeveloper.com.br/",
     "repository":  "https://github.com/ESDeveloperBR/ES32Lab/blob/main/examples/Camera/Camera-DisplayTFT/Camera-DisplayTFT.ino",
